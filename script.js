@@ -120,7 +120,7 @@ const render = () => {
 
       ctx.font = "bold 52px serif";
       ctx.fillStyle = "#FFFFBA";
-      ctx.fillText(`SCORE: ${currentScore}`, 115, 110, 414);
+      ctx.fillText(`SCORE: ${currentScore}`, 90, 110, 414);
 
       let rand = Math.random();
       if (rand < 0.25) {
@@ -158,7 +158,7 @@ const render = () => {
       
       ctx.fillStyle = "#FFFFBA";
       ctx.font = "bold 30px serif";
-      ctx.fillText("TAP TO PLAY AGAIN !", 80, 435);
+      ctx.fillText("TAP TO PLAY AGAIN !", 50, 435);
     }
     
   }
