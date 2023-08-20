@@ -131,7 +131,7 @@ const render = () => {
         lines = txt.split('\n');
       }
       else if (rand < 0.7) {
-        txt = "\"EVEN AN OLD MAN CAN PLAY BETTER \nTHAN THAT !\" - (JOSH, 2023)";
+        txt = "\"EVEN AN OLD MAN CAN PLAY\nBETTER THAN THAT !\" - (JOSH, 2023)";
         x = 10;
         y = 250;
         lineheight = 50;
