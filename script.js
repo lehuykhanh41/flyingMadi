@@ -16,6 +16,8 @@ let mapRotation = ["./kagemadiset.png", "./joshmadiset.png", "./gaiamadiset.png"
 
 let muted = false;
 
+let endGameNoti = document.getElementById("endGameNoti");
+
 let index = 0,
     bestScore = 0, 
     flight, 
@@ -109,7 +111,6 @@ const render = () => {
       ctx.font = "30px fantasy";
       ctx.fillStyle = "white";
     } else if (gamePlaying == 2) {
-      var txt, x, y, lines, lineheight;
 
       ctx.font = "60px fantasy";
       ctx.fillStyle = "#FFFFBA";
@@ -117,7 +118,7 @@ const render = () => {
 
       let rand = Math.random();
       if (rand < 0.25) {
-        txt = "\"THIS SCORE WON'T EVEN ENOUGH TO\nGET YOU ANY BITCHES.\" - (KABAE, 2023)";
+        txt = "\"THIS SCORE WON'T ENOUGH TO GET\n YOU ANY BITCHES.\" - (KABAE, 2023)";
         x = 10;
         y = 250;
         lineheight = 50;
@@ -130,7 +131,7 @@ const render = () => {
         lineheight = 50;
         lines = txt.split('\n');
       }  else {
-        txt = "\"EVEN KIDS IN MY NEIGHBORHOOD CAN\nSCORE 80 POINTS !\" - (CHADANO, 2023)";
+        txt = "\"EVEN KIDS IN MY NEIGHBORHOOD\n CAN SCORE 80 !\" - (CHADANO, 2023)";
         x = 10;
         y = 250;
         lineheight = 50;
@@ -139,7 +140,7 @@ const render = () => {
 
 
       ctx.fillStyle = "#FFFFBA";
-      ctx.fillRect(x, y-40, 425, 100);
+      ctx.fillRect(x, y-40, 390, 100);
 
       ctx.fillStyle = "teal";
       ctx.font = "28px fantasy";
@@ -152,8 +153,8 @@ const render = () => {
       ctx.fillStyle = "#FFFFBA";
       ctx.fillText("TAP TO PLAY AGAIN !", 120, 435);
     }
-       
-    }
+    
+  }
   
   document.getElementById('bestScore').innerHTML = `Best : ${bestScore}`;
   document.getElementById('currentScore').innerHTML = `Current : ${currentScore}`;
@@ -222,9 +223,6 @@ document.addEventListener('click', () => {
     }
   }
 
-  y.volume = 1;
-  y.play();
-
   if (!muted) {
     x.volume = 0.03;
     x.play();
@@ -233,4 +231,7 @@ document.addEventListener('click', () => {
   }
 });
 
-window.onclick = () => flight = jump;
+window.onclick = () => {
+  flight = jump;
+  y.play();
+}
