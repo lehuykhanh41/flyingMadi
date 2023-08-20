@@ -112,15 +112,15 @@ const render = () => {
     if (gamePlaying == 0) {
       ctx.drawImage(img, 435, Math.floor((index % 9) / 3) * size[1], ...size, ((canvas.width / 2) - size[0] / 2), flyHeight, size[0]+10, size[1]+10);
       flyHeight = (canvas.height / 2) - (size[1] / 2);
-      ctx.fillText(`BEST SCORE LAH : ${bestScore}`, 125, 198);
-      ctx.fillText("CLICK TO PLAY LAH !", 120, 435);
-      ctx.font = "30px fantasy";
+      ctx.fillText(`BEST SCORE LAH : ${bestScore}`, 1, 198);
+      ctx.fillText("CLICK TO PLAY LAH !", 1, 435);
+      ctx.font = "15px fantasy";
       ctx.fillStyle = "white";
     } else if (gamePlaying == 2) {
 
       ctx.font = "60px fantasy";
       ctx.fillStyle = "#FFFFBA";
-      ctx.fillText(`SCORE: ${currentScore}`, 120, 110);
+      ctx.fillText(`SCORE: ${currentScore}`, 1, 110);
 
       let rand = Math.random();
       if (rand < 0.25) {
@@ -138,7 +138,7 @@ const render = () => {
         lines = txt.split('\n');
       }  else {
         txt = "\"EVEN KIDS IN MY NEIGHBORHOOD\n CAN SCORE 80 !\" - (CHADANO, 2023)";
-        x = 10;
+        x = 1;
         y = 250;
         lineheight = 50;
         lines = txt.split('\n');
@@ -149,7 +149,7 @@ const render = () => {
       ctx.fillRect(x, y-40, 390, 100);
 
       ctx.fillStyle = "teal";
-      ctx.font = "28px fantasy";
+      ctx.font = "10px fantasy";
       ctx.textAlign = "left";
 
       for (var i = 0; i<lines.length; i++) {
