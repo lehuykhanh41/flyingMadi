@@ -123,20 +123,33 @@ const render = () => {
       ctx.fillText(`SCORE: ${currentScore}`, 90, 110, 414);
 
       let rand = Math.random();
-      if (rand < 0.25) {
+      if (rand < 0.2) {
         txt = "\"THIS SCORE WON'T ENOUGH TO GET\n YOU ANY BITCHES.\" - (KABAE, 2023)";
         x = 10;
         y = 250;
         lineheight = 50;
         lines = txt.split('\n');
       }
-      else if (rand < 0.7) {
+      else if (rand < 0.4) {
         txt = "\"EVEN AN OLD MAN CAN PLAY\nBETTER THAN THAT !\" - (JOSH, 2023)";
         x = 10;
         y = 250;
         lineheight = 50;
         lines = txt.split('\n');
-      }  else {
+      } else if (rand < 0.6) {
+        txt = "\"THIS GAME JUST TOLD YOU:\nMADARCHOD !\" - (HK47, 2023)";
+        x = 10;
+        y = 250;
+        lineheight = 50;
+        lines = txt.split('\n');
+      } else if (rand < 0.8) {
+        txt = "\"FUCK YOU !\" - (MADI, 2023)";
+        x = 10;
+        y = 250;
+        lineheight = 50;
+        lines = txt.split('\n');
+      }
+      else {
         txt = "\"EVEN KIDS IN MY NEIGHBORHOOD\n CAN SCORE 80 !\" - (CHADANO, 2023)";
         x = 10;
         y = 250;
