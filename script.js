@@ -114,11 +114,11 @@ const render = () => {
       flyHeight = (canvas.height / 2) - (size[1] / 2);
       ctx.fillText(`BEST SCORE LAH : ${bestScore}`, 1, 198);
       ctx.fillText("CLICK TO PLAY LAH !", 1, 435);
-      ctx.font = "15px fantasy";
+      ctx.font = "22px fantasy";
       ctx.fillStyle = "white";
     } else if (gamePlaying == 2) {
 
-      ctx.font = "60px fantasy";
+      ctx.font = "50px fantasy";
       ctx.fillStyle = "#FFFFBA";
       ctx.fillText(`SCORE: ${currentScore}`, 1, 110);
 
