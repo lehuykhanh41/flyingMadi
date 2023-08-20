@@ -114,13 +114,13 @@ const render = () => {
       flyHeight = (canvas.height / 2) - (size[1] / 2);
       ctx.fillText(`BEST SCORE LAH : ${bestScore}`, 125, 198, 414);
       ctx.fillText("CLICK TO PLAY LAH !", 120, 435, 414);
-      ctx.font = "30px serif";
+      ctx.font = "30px fantasy";
       ctx.fillStyle = "white";
     } else if (gamePlaying == 2) {
 
-      ctx.font = "bold 48px serif";
+      ctx.font = "bold 52px fantasy";
       ctx.fillStyle = "#FFFFBA";
-      ctx.fillText(`SCORE: ${currentScore}`, 120, 110, 414);
+      ctx.fillText(`SCORE: ${currentScore}`, 115, 110, 414);
 
       let rand = Math.random();
       if (rand < 0.25) {
@@ -149,15 +149,15 @@ const render = () => {
       ctx.fillRect(x, y-40, 390, 100);
 
       ctx.fillStyle = "teal";
-      ctx.font = "28px serif";
+      ctx.font = "20px fantasy";
       ctx.textAlign = "left";
 
       for (var i = 0; i<lines.length; i++) {
-        ctx.fillText(lines[i], x, y + (i*lineheight));
+        ctx.fillText(lines[i], x, y + (i*lineheight), 414);
       }
       
       ctx.fillStyle = "#FFFFBA";
-      ctx.fillText("TAP TO PLAY AGAIN !", 120, 435);
+      ctx.fillText("TAP TO PLAY AGAIN !", 80, 435);
     }
     
   }
