@@ -10,6 +10,9 @@ const size = [50, 33.5];
 const jump = -13;
 const cTenth = (canvas.width / 10);
 
+var x = document.getElementById("bgm");
+var y = document.getElementById("jump");
+
 let currentMapRotation = 0;
 
 let mapRotation = ["./kagemadiset.png", "./joshmadiset.png", "./gaiamadiset.png"];
@@ -33,6 +36,9 @@ const pipeLoc = () => (Math.random() * ((canvas.height - (pipeGap + pipeWidth)) 
 const setup = () => {
   img = new Image();
   img.src = "./flyingMadiSet.png";
+
+  x = document.getElementById("bgm");
+  y = document.getElementById("jump");
 
   currentScore = 0;
   flight = jump;
@@ -168,9 +174,6 @@ function mute() {
 setup();
 img.onload = render;
 
-var x = document.getElementById("bgm");
-var y = document.getElementById("jump");
-
 var clicked = false;
 var clicked2 = false;
 
@@ -223,6 +226,13 @@ document.addEventListener('click', () => {
     }
   }
 
+
+  y.play();
+
+  console.log(muted);
+  console.log(x);
+  console.log(y);
+
   if (!muted) {
     x.volume = 0.03;
     x.play();
@@ -233,5 +243,4 @@ document.addEventListener('click', () => {
 
 window.onclick = () => {
   flight = jump;
-  y.play();
 }
