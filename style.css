@@ -8,8 +8,10 @@ body {
 }
 header {
   margin: 0 auto;
-  width: 440px;
+  width: 414px;
 }
+
+
 h1 {
   background-color: #FFFFBA;
   padding: 1.2rem 0;
@@ -39,4 +41,9 @@ h1 {
 #bestScore {
     color: gold;
 
+}
+
+#endGameNoti {
+  display: none;
+  z-index: 2;
 }
