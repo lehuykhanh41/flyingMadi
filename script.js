@@ -112,8 +112,8 @@ const render = () => {
     if (gamePlaying == 0) {
       ctx.drawImage(img, 435, Math.floor((index % 9) / 3) * size[1], ...size, ((canvas.width / 2) - size[0] / 2), flyHeight, size[0]+10, size[1]+10);
       flyHeight = (canvas.height / 2) - (size[1] / 2);
-      ctx.fillText(`BEST SCORE LAH : ${bestScore}`, 125, 198, 414);
-      ctx.fillText("CLICK TO PLAY LAH !", 120, 435, 414);
+      ctx.fillText(`BEST SCORE LAH : ${bestScore}`, 50, 198, 414);
+      ctx.fillText("CLICK TO PLAY LAH !", 50, 435, 414);
       ctx.font = "30px fantasy";
       ctx.fillStyle = "white";
     } else if (gamePlaying == 2) {
