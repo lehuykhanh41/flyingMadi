@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0;">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> BEST GAME EVER ! </title>
     <link rel="stylesheet" href="./style.css">
@@ -18,12 +18,22 @@
         <div id="bestScore"></div>
       </div>
     </header>
-  
-    <audio id="bgm"><source id="bgmsource" src="BGM2.mp3" type="audio/mp3"></source></audio>
+    
+    <div id="gameContainer">
+    <audio id="bgm"><source id="bgmsource" src="BGM4.mp3" type="audio/mp3"></source></audio>
     <audio id="jump"><source id="jumpSource" src="jump.mp3" type="audio/mp3"></source></audio>
     <audio id="congrats"><source id="congrasSource" src="congrats.mp3" type="audio/mp3"></source></audio>
-    <canvas id="canvas" width="440" height="620"></canvas>
+    <canvas id="canvas" width="414" height="620"></canvas>
 
+    <!--
+    <div id="endGameNoti" style="width: 414px; height: 620px">
+    
+      <p id="endScore">CHIEM CHIEM</p>
+      <p id="quote">Cuca</p>
+      <p></p>
+    </div>
+  -->
+    </div>
 
 	<script src="script.js"></script>
   </body>
